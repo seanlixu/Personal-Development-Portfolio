@@ -1,0 +1,314 @@
+html{
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #303030;
+    color: white;
+    font-family: system-ui;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    width: 100vw;
+    position: relative;
+    /* height: 5000px; */
+
+}
+
+#side_bar{
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    height: 100%;
+    width: 200px; /* Ensure this width is appropriate */
+    overflow: hidden;
+    z-index: 10;
+}
+
+.menu_option{
+    position: absolute;
+    height: 50px;
+    font-size: 15px;
+    font-family: system-ui;
+    font-weight: 400;
+    left:12px; /* Moved to the right by 500px */
+    /* border: solid 2px white; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#line{
+    position: absolute;
+    left: 10px;
+    width: 0%;
+    height: 50vh;
+    border: 1px rgb(255, 255, 255) solid;
+    top: 25vh;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1); /* Adjust the scale factor as needed */
+    }
+}
+
+#glow_wrapper{
+    /* display: flex; */
+    width: 99vw;
+    height: 100%;
+    /* border: solid 2px white; */
+    overflow-x: hidden; /* This will hide overflow */
+    position: absolute; /* Added to position child elements absolutely */
+    z-index: -2;
+}
+
+.glow_blue{
+    position: absolute;
+    width: 90vw;
+    height: 120vh;
+    flex-shrink: 0;
+    border-radius: 1571.144px;
+    background: linear-gradient(-120deg, #00D0FF 20%, #004F99);
+    filter: blur(80px);
+    z-index: -1;
+    animation: pulse 7s infinite;
+    /* transform-origin: translate(50vw) scale(1); */
+    left: -20vw;
+    top: -10vw;
+
+}
+.glow_purple{
+    position: absolute;
+    width: 60vw;
+    height: 100vh;
+    transform-origin: translate(0vw, 10vh) rotate(70deg) scale(1);
+    flex-shrink: 0;
+    border-radius: 1568.722px;
+    background: linear-gradient(0deg, rgba(242, 0, 255, 0.00) -6.8%, #F200FF 106.07%);
+    filter: blur(200px);
+    z-index: -1;
+    animation: pulse 4s infinite;
+    top: 200vh;
+    left: -20vw;
+    
+}
+.glow_red{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    transform-origin: translate(0vw, 10vh) rotate(70deg) scale(1);
+    flex-shrink: 0;
+    border-radius: 1568.722px;
+    background: linear-gradient(-30deg, rgb(255, 166, 0) -6.8%, #ff0000 106.07%);
+    filter: blur(100px);
+    z-index: -3;
+    animation: pulse 8s infinite;
+    bottom: 20vh;
+}
+.glow_orange{
+    position: absolute;
+    width: 100vw;
+    height: 120vh;
+    flex-shrink: 0;
+    border-radius: 1568.722px;
+    background: linear-gradient(0deg, rgb(255, 166, 0) -6.8%, #ff0000 106.07%);
+    filter: blur(100px);
+    z-index: -2;
+    animation: pulse 3s infinite;
+    right: -30vw;
+    top: 80vh;
+}
+.glow_light_blue{
+    position: absolute;
+    width: 70vw;
+    height: 120vh;
+    flex-shrink: 0;
+    border-radius: 1571.144px;
+    background: linear-gradient(50deg, #5c009a 20%, #00ffdd);
+    filter: blur(50px);
+    z-index: -1;
+    animation: pulse 7s infinite;
+    /* transform-origin: translate(50vw) scale(1); */
+    left: -20vw;
+    top: 100vw;
+
+}
+.glow_test{
+    position: absolute;
+    width: 60vw;
+    height: 90vh;
+    transform-origin: translate(0vw, 10vh) rotate(70deg) scale(1);
+    flex-shrink: 0;
+    border-radius: 1568.722px;
+    background: linear-gradient(0deg, rgb(251, 64, 64) -6.8%, #F200FF 106.07%);
+    filter: blur(100px);
+    z-index: -1;
+    animation: pulse 4s infinite;
+    top: 250vh;
+    right: 0vw;
+    
+}
+
+#start{
+    height:100vh;
+    width:98vw;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* border: solid 2px white; */
+}
+#about_me{
+    height:100vh;
+    width:90vw;
+    padding-left: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* border: solid 2px white; */
+    overflow: hidden;
+}
+#projects{
+    /* height: 100vh; */
+    width: 98vw;
+    /* overflow-y: scroll; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* border: solid 2px white; */
+}
+#contact{
+    height:100vh;
+    width:98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* border-top: solid 2px white; */
+}
+.scale-up {
+    transform: translate(30px) scale(1.2);
+    transition: transform 0.5s; /* Smooth transition */
+}
+.scale-down {
+    transform: scale(1);
+    transition: transform 1s; /* Smooth transition */
+}
+
+#pfp_wrapper{
+    /* position: absolute; */
+    width: 20vw;
+    height: 50vh;
+    border-radius: 150px;
+    border: 15px solid rgba(242, 242, 242, 0.229);
+    overflow: hidden;
+    /* right: 10vw; */
+
+}
+
+.project_wrapper{
+    width: 80vw;
+    height: 40vh;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-top: 70px;
+    margin-bottom: 70px;
+    /* border: solid 2px white; */
+}
+
+.project_image_wrapper{
+    width: 60%;
+    height: 100%;
+    /* border: solid 2px red; */
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+}
+
+.description_wrapper{
+    width: 40%;
+    height: 70%;
+    /* border: solid 2px blue; */
+}
+
+.description_title{
+    width: 100%;
+    height: auto;
+    font-size: 300%;
+    font-weight: 500%;
+    /* border: solid 2px blue; */
+}
+
+.description_brief{
+    width: 100%;
+    height: auto;
+    font-size: 150%;
+    font-weight: 500%;
+    /* border: solid 2px blue; */
+}
+
+.splide{
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 100%;
+    height: 100%;
+    /* border: 2px white solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px red; */
+    /* border-radius: 10px; */
+
+}
+.splide__track{
+    width: 100%;
+    height: 100%;
+    /* border: red 2px solid; */
+    border-radius: 30px;
+}
+
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    /* padding: 10%; */
+    object-fit:cover; 
+    /* border: solid 2px red; */
+}
+
+.splide__arrows {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin: 0 20px; /* Reduce the margin to bring them closer */
+    display: none;
+}
+
+.splide__arrow--prev {
+    left: 20px; /* Adjust the left position */
+    display: none;
+}
+
+.splide__arrow--next {
+    right: 10px; /* Adjust the right position */
+    display: none;
+}
+
+.splide__progress__bar {
+    height: 10px;
+    background: #ffffff;
+  }
