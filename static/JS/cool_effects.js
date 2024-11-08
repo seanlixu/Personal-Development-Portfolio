@@ -22,6 +22,16 @@ $(".project_wrapper").on("mouseenter", function(event){
         transform: "scale(1)"
     });
 });
+$('.project_image_wrapper').hover(
+    function() {
+        $(this).find('.splide').hide(); // Hide the Splide
+        $(this).find('.hover_image').show(); // Show the hover image
+    },
+    function() {
+        $(this).find('.splide').show(); // Show the Splide
+        $(this).find('.hover_image').hide(); // Hide the hover image
+    }
+);
 
 
 
