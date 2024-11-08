@@ -34,19 +34,3 @@ $('.project_image_wrapper').hover(
 );
 
 
-
-// function adjustGlowWrapperHeight() {
-//     $("#glow_wrapper").css("height", `${document.documentElement.scrollHeight}px`);
-// }
-
-// $("#sean").on("mouseenter", function(event){
-//     console.log("hi")
-//     $(this).css({
-//         transition: "transform 0.2s", // Smooth transition
-//         transform: "scale(1.02)",
-//     });
-// }).on("mouseleave", function(event) {
-//     $(this).css({
-//         transform: "scale(1)"
-//     });
-// })
